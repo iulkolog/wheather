@@ -4,9 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-import java.util.Calendar;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements GreetingStrings{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,23 +13,35 @@ public class MainActivity extends AppCompatActivity {
 
         TextView greeting = (TextView) findViewById(R.id.greeting);
 
-        int currentHour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+        BuilderGreeringPhrase builderGreeringPhrase = new BuilderGreeringPhrase(this);
+        greeting.setText(builderGreeringPhrase.get());
 
-        if (5 <= currentHour && currentHour < 12){
-            greeting.setText("Good morning");
-        }
+    }
 
-        else if  (12 <= currentHour && currentHour < 6){
-            greeting.setText("Good afternon");
-        }
 
-        else if ( (6 <= currentHour && currentHour < 9)){
-            greeting.setText("Good evening");
-        }
+    @Override
+    public String getHelloer() {
+        return getResources().getString(R.string.helloer);
+    }
 
-        else{
-            greeting.setText("Good night");
-        }
+    @Override
+    public String getMorning() {
+        return getResources().getString(R.string.morning);
+    }
+
+    @Override
+    public String getAfternoon() {
+        return getResources().getString(R.string.afternoon);
+    }
+
+    @Override
+    public String getEvening() {
+        return getResources().getString(R.string.evening);
+    }
+
+    @Override
+    public String getNight() {
+        return getResources().getString(R.string.night);
     }
 }
 //TODO
