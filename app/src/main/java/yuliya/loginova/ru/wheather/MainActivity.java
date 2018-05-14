@@ -1,7 +1,7 @@
 package yuliya.loginova.ru.wheather;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import java.util.Calendar;
@@ -34,3 +34,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+//TODO
