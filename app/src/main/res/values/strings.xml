@@ -6,4 +6,9 @@
     <string name="afternoon">Good afternoon</string>
     <string name="evening">Good evening</string>
     <string name="night">Good night</string>
+    <string name="temperature">Температура сейчас</string>
+    <string name="place">Город</string>
+    <string name="probability_of_precipitation">Вероятность осадков</string>
+    <string name="humidity">Влажность</string>
+    <string name="power_of_wind">Сила ветра</string>
 </resources>

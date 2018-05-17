@@ -2,7 +2,6 @@ package yuliya.loginova.ru.wheather;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements GreetingStrings{
 
@@ -11,10 +10,10 @@ public class MainActivity extends AppCompatActivity implements GreetingStrings{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView greeting = (TextView) findViewById(R.id.greeting);
+        //TextView greeting = (TextView) findViewById(R.id.greeting);
 
-        BuilderGreeringPhrase builderGreeringPhrase = new BuilderGreeringPhrase(this);
-        greeting.setText(builderGreeringPhrase.get());
+        //BuilderGreeringPhrase builderGreeringPhrase = new BuilderGreeringPhrase(this);
+        //greeting.setText(builderGreeringPhrase.get());
 
     }
 
