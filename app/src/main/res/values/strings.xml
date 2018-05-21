@@ -7,8 +7,14 @@
     <string name="evening">Good evening</string>
     <string name="night">Good night</string>
     <string name="temperature">Температура сейчас</string>
-    <string name="place">Город</string>
+    <string name="pick_up_city_text">напишите ваш город</string>
     <string name="probability_of_precipitation">Вероятность осадков</string>
     <string name="humidity">Влажность</string>
     <string name="power_of_wind">Сила ветра</string>
+    <string name="watch_prognose_button">Посмотреть прогноз</string>
+    <string name="pick_up_city_on_map">Указать город на карте</string>
+    <string name="settings_leading">Выберите какие данные нужно показать в прогнозе</string>
+    <string name="humidity_data">Влажность 90%</string>
+    <string name="precipitation_data">ожидаются осадки в ближайший час</string>
+    <string name="wind_data">штиль</string>
 </resources>
