@@ -1,11 +1,5 @@
 <resources>
     <string name="app_name">wheather</string>
-    <string name="greetings">Hello Wheater!</string>
-    <string name="helloer">GeekBrains</string>
-    <string name="morning">Good morning</string>
-    <string name="afternoon">Good afternoon</string>
-    <string name="evening">Good evening</string>
-    <string name="night">Good night</string>
     <string name="temperature">Температура сейчас</string>
     <string name="pick_up_city_text">напишите ваш город</string>
     <string name="probability_of_precipitation">Вероятность осадков</string>
