@@ -1,7 +1,9 @@
 package yuliya.loginova.ru.wheather;
 
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity{
@@ -11,6 +13,7 @@ public class MainActivity extends AppCompatActivity{
     private TextView textViewHumidityData;
     private TextView textViewWindData;
     private TextView textViewPrecipitationData;
+    private ImageView imageViewPrecipitationIcon;
 
 
     @Override
@@ -23,6 +26,8 @@ public class MainActivity extends AppCompatActivity{
         textViewHumidityData = findViewById(R.id.textview__humidity_data);
         textViewWindData = findViewById(R.id.textview__wind_data);
         textViewPrecipitationData = findViewById(R.id.textview__probability_of_precipitation_data);
+        imageViewPrecipitationIcon = findViewById(R.id.imageview_p_o_p_icon);
+
 
         String city = getIntent().getExtras().getString(SettingsActivity.SETTINGS_DATA_CITY);
         textViewCityName.setText(city);
@@ -31,7 +36,7 @@ public class MainActivity extends AppCompatActivity{
         Boolean wind = getIntent().getExtras().getBoolean(SettingsActivity.SETTINGS_DATA_POWER_OF_WIND);
         Boolean precipitation = getIntent().getExtras().getBoolean(SettingsActivity.SETTINGS_DATA_PRECIPITATION);
 
-        setHumidityData();
+        setTextViewTemperatureData();
 
         if (humidity)
             setHumidityData();
@@ -47,10 +52,11 @@ public class MainActivity extends AppCompatActivity{
 
     private void setPrecipitationData() {
         textViewPrecipitationData.setText(R.string.precipitation_data);
+        imageViewPrecipitationIcon.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.if_sunny_3233850));
     }
 
     private void setWindData() {
-        textViewWindData.setText(R.string.power_of_wind);
+        textViewWindData.setText(R.string.wind_data);
     }
 
     private void setHumidityData() {

@@ -4,4 +4,5 @@
     <dimen name="text_size_title">20sp</dimen>
     <dimen name="text_size_subtitle">15sp</dimen>
     <dimen name="text_size_ordinarytext">12sp</dimen>
+    <dimen name="layout_marginStart">12dp</dimen>
 </resources>

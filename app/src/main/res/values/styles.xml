@@ -22,6 +22,8 @@
     <style name="WhetherResultDataTextStyle" parent="@android:style/TextAppearance">
         <item name="android:textColor">@color/colorWheteherDataTM</item>
         <item name="android:textSize">@dimen/text_size_subtitle</item>
+        <item name="android:layout_marginStart">@dimen/layout_marginStart</item>
+
     </style>
 
     <style name="TitleTextStyle" parent="@android:style/TextAppearance">
