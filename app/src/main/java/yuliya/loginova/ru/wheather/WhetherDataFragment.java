@@ -1,19 +1,12 @@
 package yuliya.loginova.ru.wheather;
 
 import android.app.Fragment;
-import android.content.res.TypedArray;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 public class WhetherDataFragment extends Fragment {
 
     public static final String PARCEL = "parcel";
 
-    public static WhetherDataFragment create(Parcel parcel) {
+   /* public static WhetherDataFragment create(Parcel parcel) {
         WhetherDataFragment f = new WhetherDataFragment();
 
         // передача параметра
@@ -44,5 +37,5 @@ public class WhetherDataFragment extends Fragment {
     public Parcel getParcel() {
         Parcel parcel = (Parcel) getArguments().getSerializable(PARCEL);
         return parcel;
-    }
+    }*/
 }

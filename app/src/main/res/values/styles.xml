@@ -6,6 +6,36 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
     </style>
+
+    <style name="MyTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimaryMT</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkMT</item>
+        <item name="colorAccent">@color/colorAccentMT</item>
+        <item name="colorButtonNormal">@color/colorButtonsNormalMT</item>
+        <item name="android:windowTitleSize">@dimen/text_size_apptitle</item>
+        <item name="android:textColorHint">@color/colorHintTextTM</item>
+
+    </style>
+
+    <style name="WhetherResultDataTextStyle" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorWheteherDataTM</item>
+        <item name="android:textSize">@dimen/text_size_subtitle</item>
+    </style>
+
+    <style name="TitleTextStyle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/text_size_title</item>
+    </style>
+
+    <style name="SubTitleTextStyle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/text_size_subtitle</item>
+    </style>
+
+    <style name="OrdinaryTextStyle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/text_size_ordinarytext</item>
+    </style>
+
+
 
 </resources>

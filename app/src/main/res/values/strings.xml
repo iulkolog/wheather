@@ -1,14 +1,20 @@
 <resources>
-    <string name="app_name">wheather</string>
-    <string name="temperature">Температура сейчас</string>
-    <string name="pick_up_city_text">напишите ваш город</string>
+    <string name="app_name">Погода</string>
+
+    <string name="select_city_text">Напишите ваш город</string>
+    <string name="select_city_on_map">Указать город на карте</string>
+    <string name="settings_leading_text">Выберите какие данные нужно показать в прогнозе</string>
+    <string name="watch_prognose_button">Посмотреть прогноз</string>
+
     <string name="probability_of_precipitation">Вероятность осадков</string>
     <string name="humidity">Влажность</string>
     <string name="power_of_wind">Сила ветра</string>
-    <string name="watch_prognose_button">Посмотреть прогноз</string>
-    <string name="pick_up_city_on_map">Указать город на карте</string>
-    <string name="settings_leading">Выберите какие данные нужно показать в прогнозе</string>
-    <string name="humidity_data">Влажность 90%</string>
+    <string name="temperature">Температура сейчас</string>
+
+
+    <string name="humidity_data">90%</string>
     <string name="precipitation_data">ожидаются осадки в ближайший час</string>
     <string name="wind_data">штиль</string>
+    <string name="temperature_data">20, *C</string>
+    <string name="imageview_p_o_p_icon_description">иконка вероятности осадков</string>
 </resources>

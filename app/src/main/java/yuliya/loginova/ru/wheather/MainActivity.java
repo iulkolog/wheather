@@ -6,13 +6,23 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity{
 
+    private TextView textViewCityName;
+    private TextView textViewTemperatureData;
+    private TextView textViewHumidityData;
+    private TextView textViewWindData;
+    private TextView textViewPrecipitationData;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView textViewCityName = findViewById(R.id.textview_cityname);
-        TextView textViewData = findViewById(R.id.textview_whether_data);
+        textViewCityName = findViewById(R.id.textview_cityname);
+        textViewTemperatureData = findViewById(R.id.textview__temperature_data);
+        textViewHumidityData = findViewById(R.id.textview__humidity_data);
+        textViewWindData = findViewById(R.id.textview__wind_data);
+        textViewPrecipitationData = findViewById(R.id.textview__probability_of_precipitation_data);
 
         String city = getIntent().getExtras().getString(SettingsActivity.SETTINGS_DATA_CITY);
         textViewCityName.setText(city);
@@ -21,15 +31,34 @@ public class MainActivity extends AppCompatActivity{
         Boolean wind = getIntent().getExtras().getBoolean(SettingsActivity.SETTINGS_DATA_POWER_OF_WIND);
         Boolean precipitation = getIntent().getExtras().getBoolean(SettingsActivity.SETTINGS_DATA_PRECIPITATION);
 
+        setHumidityData();
+
         if (humidity)
-            textViewData.append(getString(R.string.humidity_data) + "\n");
+            setHumidityData();
 
         if (wind)
-            textViewData.append(getString(R.string.wind_data)+ "\n");
+            setWindData();
 
         if (precipitation)
-            textViewData.append(getString(R.string.precipitation_data)+ "\n");
+            setPrecipitationData();
 
+
+    }
+
+    private void setPrecipitationData() {
+        textViewPrecipitationData.setText(R.string.precipitation_data);
+    }
+
+    private void setWindData() {
+        textViewWindData.setText(R.string.power_of_wind);
+    }
+
+    private void setHumidityData() {
+        textViewHumidityData.setText(R.string.humidity_data);
+    }
+
+    private void setTextViewTemperatureData() {
+        textViewTemperatureData.setText(R.string.temperature_data);
     }
 
 
