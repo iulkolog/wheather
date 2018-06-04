@@ -1,12 +1,15 @@
-package yuliya.loginova.ru.wheather;
+package yuliya.loginova.ru.wheather.fragments;
 
 import android.app.Fragment;
+import android.os.Bundle;
+
+import yuliya.loginova.ru.wheather.SettingsParcel;
 
 public class WhetherDataFragment extends Fragment {
 
     public static final String PARCEL = "parcel";
 
-   /* public static WhetherDataFragment create(Parcel parcel) {
+    public static WhetherDataFragment create(SettingsParcel parcel) {
         WhetherDataFragment f = new WhetherDataFragment();
 
         // передача параметра
@@ -16,7 +19,7 @@ public class WhetherDataFragment extends Fragment {
         return f;
     }
 
-    @Override
+    /*@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View layout = inflater.inflate(R.layout.fragment_coatofarm, container, false);
@@ -26,7 +29,7 @@ public class WhetherDataFragment extends Fragment {
 
         // получить из ресурсов массив указателей на изображения гербов
         TypedArray imgs = getResources().obtainTypedArray(R.array.coatofarms_imgs);
-        Parcel parcel = getParcel();
+        SettingsParcel parcel = getParcel();
 
         // выбрать по индексу подходящий
         coatOfArms.setImageResource(imgs.getResourceId(parcel.getImageIndex(), -1));
@@ -34,8 +37,8 @@ public class WhetherDataFragment extends Fragment {
         return layout; // Вместо макета используем сразу картинку
     }
 
-    public Parcel getParcel() {
-        Parcel parcel = (Parcel) getArguments().getSerializable(PARCEL);
+    public SettingsParcel getParcel() {
+        SettingsParcel parcel = (SettingsParcel) getArguments().getSerializable(PARCEL);
         return parcel;
     }*/
 }

@@ -1,4 +1,4 @@
-package yuliya.loginova.ru.wheather;
+package yuliya.loginova.ru.wheather.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,13 +8,11 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
+import yuliya.loginova.ru.wheather.R;
+import yuliya.loginova.ru.wheather.SettingsDataEnum;
+
 public class SettingsActivity extends AppCompatActivity {
 
-    public static final String SETTINGS_DATA_CITY = "city";
-    public static final String SETTINGS_DATA_HUMIDITY = "humidity";
-    public static final String SETTINGS_DATA_TEMPERATURE = "temperature";
-    public static final String SETTINGS_DATA_POWER_OF_WIND = "power of wind";
-    public static final String SETTINGS_DATA_PRECIPITATION = "precipitation";
 
     private EditText editTextCity;
     private CheckBox checkBoxHumidity;
@@ -26,7 +24,7 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.settings_layout);
+        setContentView(R.layout.settings_layout_fragment);
 
         editTextCity = findViewById(R.id.editText_Place);
         checkBoxHumidity = findViewById(R.id.checkBox_humidity);
@@ -43,16 +41,16 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     private Intent buildIntent(Intent intent) {
-        intent.putExtra(SETTINGS_DATA_CITY, editTextCity.getText().toString().trim());
+        intent.putExtra(SettingsDataEnum.SETTINGS_DATA_CITY.name(), editTextCity.getText().toString().trim());
         //intent.putExtra(SETTINGS_DATA_TEMPERATURE, cbTemperature.isChecked());
-        intent.putExtra(SETTINGS_DATA_HUMIDITY, checkBoxHumidity.isChecked());
-        intent.putExtra(SETTINGS_DATA_POWER_OF_WIND, checkBoxPowerOfWind.isChecked());
-        intent.putExtra(SETTINGS_DATA_PRECIPITATION, checkBoxPrecipitation.isChecked());
+        intent.putExtra(SettingsDataEnum.SETTINGS_DATA_HUMIDITY.name(), checkBoxHumidity.isChecked());
+        intent.putExtra(SettingsDataEnum.SETTINGS_DATA_POWER_OF_WIND.name(), checkBoxPowerOfWind.isChecked());
+        intent.putExtra(SettingsDataEnum.SETTINGS_DATA_PRECIPITATION.name(), checkBoxPrecipitation.isChecked());
         return intent;
     }
 
     private void showWeather() {
-        Intent intent = new Intent(SettingsActivity.this, MainActivity.class);
+        Intent intent = new Intent(SettingsActivity.this, WhetherDataActivity.class);
         startActivity(buildIntent(intent));
     }
 }

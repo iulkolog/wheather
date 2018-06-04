@@ -1,4 +1,4 @@
-package yuliya.loginova.ru.wheather;
+package yuliya.loginova.ru.wheather.activity;
 
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -6,7 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity{
+import yuliya.loginova.ru.wheather.R;
+import yuliya.loginova.ru.wheather.SettingsDataEnum;
+
+public class WhetherDataActivity extends AppCompatActivity{
 
     private TextView textViewCityName;
     private TextView textViewTemperatureData;
@@ -19,7 +22,7 @@ public class MainActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.whether_data_fragment);
 
         textViewCityName = findViewById(R.id.textview_cityname);
         textViewTemperatureData = findViewById(R.id.textview__temperature_data);
@@ -29,12 +32,12 @@ public class MainActivity extends AppCompatActivity{
         imageViewPrecipitationIcon = findViewById(R.id.imageview_p_o_p_icon);
 
 
-        String city = getIntent().getExtras().getString(SettingsActivity.SETTINGS_DATA_CITY);
+        String city = getIntent().getExtras().getString(SettingsDataEnum.SETTINGS_DATA_CITY.name());
         textViewCityName.setText(city);
 
-        Boolean humidity = getIntent().getExtras().getBoolean(SettingsActivity.SETTINGS_DATA_HUMIDITY);
-        Boolean wind = getIntent().getExtras().getBoolean(SettingsActivity.SETTINGS_DATA_POWER_OF_WIND);
-        Boolean precipitation = getIntent().getExtras().getBoolean(SettingsActivity.SETTINGS_DATA_PRECIPITATION);
+        Boolean humidity = getIntent().getExtras().getBoolean(SettingsDataEnum.SETTINGS_DATA_HUMIDITY.name());
+        Boolean wind = getIntent().getExtras().getBoolean(SettingsDataEnum.SETTINGS_DATA_POWER_OF_WIND.name());
+        Boolean precipitation = getIntent().getExtras().getBoolean(SettingsDataEnum.SETTINGS_DATA_PRECIPITATION.name());
 
         setTextViewTemperatureData();
 
