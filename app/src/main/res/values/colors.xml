@@ -3,4 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimaryMT">#00BFFF</color>
+    <color name="colorPrimaryDarkMT">#0000FF</color>
+    <color name="colorAccentMT">#00FA9A</color>
+    <color name="colorButtonsNormalMT">#1E90FF</color>
+    <color name="colorHintTextTM">#ABCDEF</color>
+    <color name="colorWheteherDataTM">#7c191f</color>
+
 </resources>
