@@ -1,13 +1,13 @@
 package yuliya.loginova.ru.wheather.activity;
 
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import yuliya.loginova.ru.wheather.R;
-import yuliya.loginova.ru.wheather.SettingsDataEnum;
+import yuliya.loginova.ru.wheather.fragments.WhetherDataFragment;
+
+import static android.content.res.Configuration.ORIENTATION_LANDSCAPE;
 
 public class WhetherDataActivity extends AppCompatActivity{
 
@@ -21,6 +21,25 @@ public class WhetherDataActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        if (getResources().getConfiguration().orientation == ORIENTATION_LANDSCAPE) {
+            // Если устройство перевернули в альбомную ориентацию, то надо это активити закрыть
+            finish();
+            return;
+        }
+
+        if (savedInstanceState == null) {
+            // Если это активити запускается первый раз (с каждым новым гербом первый раз)
+            // то перенаправим параметр фрагменту
+            WhetherDataFragment details = new WhetherDataFragment();
+            details.setArguments(getIntent().getExtras());
+            // Добавим фрагмент на активити
+            getFragmentManager().beginTransaction().add(android.R.id.content, details).commit();
+        }
+    }
+
+   /* protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.whether_data_fragment);
 
@@ -68,7 +87,7 @@ public class WhetherDataActivity extends AppCompatActivity{
 
     private void setTextViewTemperatureData() {
         textViewTemperatureData.setText(R.string.temperature_data);
-    }
+    }*/
 
 
 }
