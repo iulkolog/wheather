@@ -30,6 +30,7 @@
             style="@style/OrdinaryTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             android:text="@string/temperature" />
 
         <TextView
@@ -46,6 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ll_temperature"
         android:orientation="horizontal"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll_temperature">
@@ -55,6 +57,7 @@
             style="@style/OrdinaryTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             android:text="@string/humidity" />
 
         <TextView
@@ -71,6 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ll_humidity"
         android:orientation="horizontal"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll_humidity">
@@ -80,6 +84,7 @@
             style="@style/OrdinaryTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             android:text="@string/power_of_wind" />
 
         <TextView
@@ -96,6 +101,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ll_wind"
         android:orientation="horizontal"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll_wind">
